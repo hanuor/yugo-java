@@ -10,4 +10,10 @@ public class Perceptron {
     public double calculatedWeightedSum(int[] data, double[] weights) {
         return 0.0;
     }
+    public int applyActivationFunction(double weightedSum){
+        return 0;
+    }
+    public double[] adjustWeights(int[] data, double[] weights, double error){
+        return null;
+    }
 }

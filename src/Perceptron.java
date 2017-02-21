@@ -8,12 +8,24 @@ public class Perceptron {
 
 
     public double calculatedWeightedSum(int[] data, double[] weights) {
-        return 0.0;
+        double weightedSum = 0.0;
+        for(int x = 0; x < data.length; x++){
+            weightedSum += data[x]*weights[x];
+        }
+        return weightedSum;
     }
     public int applyActivationFunction(double weightedSum){
-        return 0;
+        int result = 0;
+        if(weightedSum > 1){
+            result = 1;
+        }
+        return result;
     }
     public double[] adjustWeights(int[] data, double[] weights, double error){
-        return null;
+        double[] adjustedWeights = new double[weights.length];
+        for(int x = 0; x<weights.length; x++){
+            adjustedWeights[x] = LEARNING_RATE * error * data[x] + weights[x];
+        }
+        return adjustedWeights;
     }
 }
